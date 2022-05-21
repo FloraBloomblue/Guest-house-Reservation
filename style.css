@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight:600;
+}
+body{  
+    background-image: url('https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872');
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover; 
+}
+.container{
+    height: 850px;
+    width: 700px;
+    margin: 5rem auto;
+    background-image: linear-gradient(to right top, #1d3355, #3d6b7f, #6f9797, #adc2b6, #ebeee3);
+    box-shadow: 10px 10px 10px hsl(218, 39%, 38%);
+    border-radius: 15px;  
+    justify-content: center;
+    align-content: center;
+    opacity: 0.9;
+}
+h1{
+    text-align: center;
+    color: hsl(216, 72%, 15%) ;
+    margin: 30px auto 25px;
+    font-family:'Outfit', sans-serif;
+    font-weight: 900 bold;
+}
+h4{
+    text-align: center;
+    color: hsl(216, 58%, 20%) ;
+    margin: 0px auto 25px; 
+    font-family: 'Outfit', sans-serif;  
+    font-weight: 700;
+}
+.reservation-form{
+    margin: 10px;
+    margin-left: 30px;  
+    margin-right: 30px; 
+    border: 1px solid white;
+    padding: 35px ;
+    text-align: bold;
+}
+form label{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: #02011d;
+}
+.name, .name, .mail, .ID-card, .pass, .total-person{
+    width: 130px;
+    height: 30px;   
+}
+.card{
+    height: 20px;
+    width: 30px;
+}
+.button{
+    margin-top: 30px;
+    margin: 10px;
+    justify-content:space-between;
+    width: 120px;
+    height: 50px;
+    color: white;
+    background-image: linear-gradient(to left, #181d25, #2c2f57, #3e5491);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius:20px;
+}
+.reservation-form span{
+    position: absolute;
+    margin: 7px;
+    font-size: 14px;
+    color: rgb(240, 6, 6);
+}
+#submit-error{
+    color: rgb(240, 6, 6);
+}
+
