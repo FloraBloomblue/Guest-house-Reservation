@@ -8,65 +8,59 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-            <link rel= "stylesheet " href="style.css"><!--css file link-->
-            
-            
+            <link rel= "stylesheet " href="style.css"><!--css file link-->  
         </head>
     
-
-
-
-
-
         <!--html part-structure of the form -->
+
         <body>
-           
             <div class="container">
                 <h1>Welcome to IGNOU</h1>
                 <h4> ( Please fill up your details ) </h4> 
-                    <form  class="reservation-form">
-                        <!-- Name- First Name and Last Name-->
+                    <form  action="insert.php" method="POST" class="reservation-form">
+
+                        <!-- Name: First Name and Last Name-->
                         <label for="first-name">First Name:</label>&nbsp;
-                        <input type="text" class="name" placeholder="First Name" name="" id="Fname" onkeyup="validatefName()">
+                        <input type="text" class="name" placeholder="First Name" name="firstName" id="Fname" onkeyup="validatefName()">
                         <span id="firstName"></span><br><br>
 
                         <label for="last-name">Last Name: </label>&nbsp;
-                        <input type="text" class="name" placeholder="Last Name" name="" id="Lname" onkeyup="validatelName()">
+                        <input type="text" class="name" placeholder="Last Name" name="lastName" id="Lname" onkeyup="validatelName()">
                         <span id="last-name"></span><br><br>
                         
                         <!-- Email ID-->
                         <label for="emailID">Email ID: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="email" class="mail" placeholder="Email ID" name="" id="e-mail" onkeyup="validateEmail()">
+                        <input type="email" class="mail" placeholder="Email ID" name="emailid" id="e-mail" onkeyup="validateEmail()">
                         <span id="Email-ID"></span><br><br>
                         
                         <!--Government ID-->
                         <label for="govt-ID">Govt. Issued ID:</label>&nbsp;
-                        <select name="" id="" class="ID-card">
-                            <option value="Aadhar Card">Aadhar Card</option>
+                        <select name="govtid" id="" class="ID-card">
+                            <option selected value="Aadhar Card">Aadhar Card</option>
                             <option value="Driving Licence">Driving Licence</option>
                             <option value="Voter ID">Voter ID</option>
                             <option value="Passport">Passport</option>
                           </select> &nbsp; &nbsp;
-                        <input type="text" class="ID-card"  placeholder="ID Number" name="" id="govt-ID" onkeyup="validateGovtID()">
+                        <input type="text" class="ID-card"  placeholder="ID Number" name="govtidnum" id="govt-ID" onkeyup="validateGovtID()">
                         <span id="government-ID"></span><br><br>
                         
                         <!-- Arrival and Departure-->
                         <label for="arrival">Date of Arrival: </label>
-                        <input type="date" class="pass"   name="" id="arrival-date" onkeyup="validateArrival()">
+                        <input type="date" class="pass"   name="arrivaldate" id="arrival-date" onkeyup="validateArrival()">
                         <span id="arrival"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                         <label for="departure">Date of Departure: </label>
-                        <input type="date" class="pass"  name="" id="departure-date" onkeyup="validateDeparture()">
+                        <input type="date" class="pass"  name="departuredate" id="departure-date" onkeyup="validateDeparture()">
                         <span id="departure"></span><br><br>
 
                         <!-- Country-->
                         <label for="country">Country: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="text" class="name" placeholder="Country Name" name="" id="country" onkeyup="validateCountry()">
+                        <input type="text" class="name" placeholder="Country Name" name="countryname" id="country" onkeyup="validateCountry()">
                         <span id="C"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                         <!-- Total Members -->
                         <label for="total">No. of Persons: </label>
-                        <input type="number" value="0" min="1" max="10" class="total-person" placeholder="Total members" name="" id="total-person" onkeyup="validateTotal()">
+                        <input type="number" value="0" min="1" max="10" class="total-person" placeholder="Total members" name="people" id="total-person" onkeyup="validateTotal()">
                         <span id="TM">  </span><br><br>
 
                         <!-- Special message or request-->
@@ -84,13 +78,15 @@
                         
 
                         <!-- Buttons -->
-                        <input type="submit" value="Submit" class="button" onclick="return myFunction()" name="">
+                        <!-- submit form  -->
+                        <input type="submit" value="Submit" class="button" onclick="return myFunction()" name="submit">
                         <span id="submit-error"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <!-- reset form -->
                         <input type="Reset" class="button">&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="submit" value="Cancel" class="button" onclick="return functionCancel()" name="">
+                        <!-- cancel form and redirect it to google page -->
+                        <a href="http://google.com"><input type="button" value="Cancel" class="button"></a>
 
                     </form>
-            
             </div>
             <!-- javascript file link--> 
             <script type="text/javascript" src="myscript.js"></script>  
