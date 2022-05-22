@@ -69,6 +69,7 @@ form label{
     border: none;
     cursor: pointer;
     border-radius:20px;
+    text-align: center;
 }
 .reservation-form span{
     position: absolute;
@@ -79,4 +80,3 @@ form label{
 #submit-error{
     color: rgb(240, 6, 6);
 }
-
